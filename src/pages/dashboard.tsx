@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { set, useForm } from "react-hook-form";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
@@ -66,7 +66,7 @@ const Dashboard = () => {
             />
             {errors.model && (
               <span className="text-red-600 text-sm">
-                {errors.model.message}
+                {errors.model.message as string}
               </span>
             )}
           </div>
@@ -82,7 +82,7 @@ const Dashboard = () => {
             />
             {errors.name && (
               <span className="text-red-600 text-sm">
-                {errors.name.message}
+                {errors.name.message as string}
               </span>
             )}
           </div>
