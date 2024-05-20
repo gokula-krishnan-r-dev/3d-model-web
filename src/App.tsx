@@ -23,7 +23,7 @@ function App() {
   const [models, setModels] = useState<Model[]>([]);
   const fetchModels = async () => {
     try {
-      const response = await fetch("http://localhost:3000/models");
+      const response = await fetch("https://3d-model-api.vercel.app/models");
       const data = await response.json();
       setModels(data);
     } catch (error) {

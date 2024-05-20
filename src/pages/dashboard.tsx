@@ -19,7 +19,7 @@ const Dashboard = () => {
       formData.append("name", data.name);
       formData.append("model", data.model[0]);
       const response = await axios.post(
-        "http://localhost:3000/model",
+        "https://3d-model-api.vercel.app/model",
         formData,
         {
           headers: {
